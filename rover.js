@@ -29,20 +29,20 @@ function goForward(myRover) {
 function goBack(myRover) {
   switch(myRover.direction) {
     case 'N':
-      myRover.position[0]++;
-    break;
-    case 'E':
-      myRover.position[1]++;
-    break;
-    case 'S':
       myRover.position[0]--;
     break;
-    case 'W':
+    case 'E':
       myRover.position[1]--;
+    break;
+    case 'S':
+      myRover.position[0]++;
+    break;
+    case 'W':
+      myRover.position[1]++;
     break;
     }
 
-  console.log("New Rover position: [" + myRover.position[0] + ", " + myRover.position[1] + "]");
+  console.log("New Rover position: [" + myRover.position[0] + ", " + myRover.position[0] + "]");
 }
 
 
@@ -62,7 +62,7 @@ function goRight(myRover) {
     break;
     }
 
-    console.log("New Rover position: [" + myRover.position[0] + ", " + myRover.position[1] + "]");
+    console.log("New Rover position: [" + myRover.position[0] + ", " + myRover.position[0] + "]");
     console.log("Rover is now facing: [" + myRover.direction + "]");
 }
 
@@ -84,7 +84,7 @@ function goLeft(myRover) {
     break;
     }
 
-    console.log("New Rover position: [" + myRover.position[0] + ", " + myRover.position[1] + "]");
+    console.log("New Rover position: [" + myRover.position[0] + ", " + myRover.position[0] + "]");
     console.log("Rover is now facing: [" + myRover.direction + "]");
 }
 
