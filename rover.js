@@ -7,85 +7,85 @@ var myRover = {
 
 //Directional face functions
 
-function goForward(rover) {
-  switch(rover.direction) {
+function goForward(myRover) {
+  switch(myRover.direction) {
     case 'N':
-      rover.position[0]++;
+      myRover.position[0]++;
       break;
     case 'E':
-      rover.position[1]++;
+      myRover.position[1]++;
       break;
     case 'S':
-      rover.position[0]--;
+      myRover.position[0]--;
       break;
     case 'W':
-      rover.position[1]--;
+      myRover.position[1]--;
       break;
   }
 
-  console.log("New Rover Position: [" + rover.position[0] + ", " + rover.position[1] + "]");
+  console.log("New Rover Position: [" + myRover.position[0] + ", " + myRover.position[0] + "]");
 }
 
-function goBack(rover) {
-  switch(rover.direction) {
+function goBack(myRover) {
+  switch(myRover.direction) {
     case 'N':
-      rover.position[0]++;
+      myRover.position[0]++;
     break;
     case 'E':
-      rover.position[1]++;
+      myRover.position[1]++;
     break;
     case 'S':
-      rover.position[0]--;
+      myRover.position[0]--;
     break;
     case 'W':
-      rover.position[1]--;
+      myRover.position[1]--;
     break;
     }
 
-  console.log("New Rover position: [" + rover.position[0] + ", " + rover.position[1] + "]");
+  console.log("New Rover position: [" + myRover.position[0] + ", " + myRover.position[1] + "]");
 }
 
 
-function goRight(rover) {
-  switch(rover.direction){
+function goRight(myRover) {
+  switch(myRover.direction){
     case 'N':
-      rover.direction = 'E';
+      myRover.direction = 'E';
     break;
     case 'E':
-      rover.direction = 'S';
+      myRover.direction = 'S';
     break;
     case 'S':
-      rover.direction = 'W';
+      myRover.direction = 'W';
     break;
     case 'W':
-      rover.direction = 'N';
+      myRover.direction = 'N';
     break;
     }
 
-    console.log("New Rover position: [" + rover.position[0] + ", " + rover.position[1] + "]");
-    console.log("Rover is now facing: [" + rover.direction + "]");
+    console.log("New Rover position: [" + myRover.position[0] + ", " + myRover.position[1] + "]");
+    console.log("Rover is now facing: [" + myRover.direction + "]");
 }
 
 
 
-function goLeft(rover) {
-  switch(rover.direction){
+function goLeft(myRover) {
+  switch(myRover.direction){
     case 'N':
-      rover.direction = 'W';
+      myRover.direction = 'W';
     break;
     case 'E':
-      rover.direction = 'N';
+      myRover.direction = 'N';
     break;
     case 'S':
-      rover.direction = 'E';
+      myRover.direction = 'E';
     break;
     case 'W':
-      rover.direction = 'S';
+      myRover.direction = 'S';
     break;
     }
 
-    console.log("New Rover position: [" + rover.position[0] + ", " + rover.position[1] + "]");
-    console.log("Rover is now facing: [" + rover.direction + "]");
+    console.log("New Rover position: [" + myRover.position[0] + ", " + myRover.position[1] + "]");
+    console.log("Rover is now facing: [" + myRover.direction + "]");
 }
 
 
@@ -115,7 +115,7 @@ function inputCmd (){
     }
 
     else {
-      console.log('error');
+      console.log('INVALID INPUT DETECTED');
       return inputCmd();
     }
   }//end of for loop
@@ -125,16 +125,16 @@ function inputCmd (){
 
 //pseudo-grid wrap statements
 
-if (myRover.position[0] > 10){
+if (myRover.position[0] > 9){
   myRover.position[0] -= 10;
 }
-if (myRover.position[0] < 10){
+if (myRover.position[0] < 0){
   myRover.position[0] += 10;
 }
-if (myRover.position[1] > 10){
+if (myRover.position[1] > 9){
   myRover.position[1] -= 10;
 }
-if (myRover.position[1] < 10){
+if (myRover.position[1] < 0){
   myRover.position[1] += 10;
 }
 
