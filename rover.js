@@ -155,14 +155,6 @@ var rocket = {
 
 
 
-//test test button
-
-
-function commands() {
-  var commands = prompt('Hi operator! Please input the sequence of commands to move the rover. Use f (foward), b (backward), l (left) or r (right).');
-}
-
-
 
 /*Note: Upon much research and testing I decided
 to omit the presence of the grid. For whatever reason
